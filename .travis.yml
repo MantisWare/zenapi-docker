@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t MantisWare/zenapi .
+  - docker-compose up -d
+  - sleep 60
+  - curl -f localhost:5050
+  - docker logs zenapidocker_api_1
