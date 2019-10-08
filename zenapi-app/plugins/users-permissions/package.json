@@ -1,0 +1,80 @@
+{
+  "_from": "zenapi-plugin-users-permissions",
+  "_id": "zenapi-plugin-users-permissions@1.0.9",
+  "_inBundle": false,
+  "_integrity": "sha512-EBkr3RV7JR74rOYLBAMgrb16dmZSdrTYG34kM+WaUvSqUHcyqA3IDlw41TotEfh6avs7CkdJSfjbD5MTIiOYmA==",
+  "_location": "/zenapi-plugin-users-permissions",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "zenapi-plugin-users-permissions",
+    "name": "zenapi-plugin-users-permissions",
+    "escapedName": "zenapi-plugin-users-permissions",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/zenapi-plugin-users-permissions/-/zenapi-plugin-users-permissions-1.0.9.tgz",
+  "_shasum": "406a1f96a078e054a068a1e1d6252822bf248fde",
+  "_spec": "zenapi-plugin-users-permissions",
+  "_where": "/usr/src/api/zenapi-app",
+  "author": {
+    "name": "Waldo Marais",
+    "email": "waldo@mantisware.co.za",
+    "url": "http://mantisware.co.za"
+  },
+  "bugs": {
+    "url": "https://github.com/tysflotv/zenapi/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "grant-koa": "^4.2.0",
+    "jsonwebtoken": "^8.1.0",
+    "koa": "^2.1.0",
+    "koa2-ratelimit": "^0.6.1",
+    "purest": "^2.0.1",
+    "request": "^2.83.0",
+    "uuid": "^3.1.0",
+    "zenapi-helper-plugin": "^1.0.9",
+    "zenapi-utils": "^1.0.9"
+  },
+  "deprecated": false,
+  "description": "Protect your API with a full-authentication process based on JWT",
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "https://github.com/tysflotv/zenapi#readme",
+  "license": "MIT",
+  "maintainers": [],
+  "name": "zenapi-plugin-users-permissions",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tysflotv/zenapi.git"
+  },
+  "scripts": {
+    "analyze": "node ./node_modules/zenapi-helper-plugin/lib/internals/scripts/analyze.js",
+    "analyze:clean": "rimraf stats.json",
+    "build": "cross-env NODE_ENV=production node_modules/zenapi-helper-plugin/node_modules/.bin/webpack --config node_modules/zenapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "build:clean": "rimraf admin/build",
+    "build:dev": "cross-env NODE_ENV=development ./node_modules/zenapi-helper-plugin/node_modules/.bin/webpack --config node_modules/zenapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "generate": "node ./node_modules/plop/plop.js --plopfile node_modules/zenapi-helper-plugin/lib/internals/generators/index.js",
+    "preanalyze": "npm run analyze:clean",
+    "prebuild": "npm run build:clean",
+    "prepublishOnly": "IS_MONOREPO=true npm run build",
+    "prettier": "node ./node_modules/zenapi-helper-plugin/node_modules/.bin/prettier --single-quote --trailing-comma es5 --write \"{admin,__{tests,mocks}__}/**/*.js\"",
+    "start": "cross-env NODE_ENV=development ./node_modules/zenapi-helper-plugin/lib/server",
+    "test": "echo \"no tests yet\""
+  },
+  "version": "1.0.9",
+  "zenapi": {
+    "name": "Roles & Permissions",
+    "icon": "users",
+    "description": "users-permissions.plugin.description"
+  }
+}

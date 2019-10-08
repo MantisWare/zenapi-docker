@@ -1,0 +1,76 @@
+{
+  "_from": "zenapi-plugin-settings-manager",
+  "_id": "zenapi-plugin-settings-manager@1.0.9",
+  "_inBundle": false,
+  "_integrity": "sha512-iVMiOA8yXxN3i9v1QBvisC8P3XCB1r9RlGTws+C7QEsN4OkcoecqqAgpmPrWl5y2NKYOvRYnooycgOJj8AANDQ==",
+  "_location": "/zenapi-plugin-settings-manager",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "zenapi-plugin-settings-manager",
+    "name": "zenapi-plugin-settings-manager",
+    "escapedName": "zenapi-plugin-settings-manager",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/zenapi-plugin-settings-manager/-/zenapi-plugin-settings-manager-1.0.9.tgz",
+  "_shasum": "185cf060c3994c4cd721ad32edeb24abb8e66686",
+  "_spec": "zenapi-plugin-settings-manager",
+  "_where": "/usr/src/api/zenapi-app",
+  "author": {
+    "name": "Waldo Marais",
+    "email": "waldo@mantisware.co.za",
+    "url": "http://mantisware.co.za"
+  },
+  "bugs": {
+    "url": "https://github.com/tysflotv/zenapi/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "flag-icon-css": "^2.8.0",
+    "rimraf": "^2.6.3",
+    "shelljs": "^0.7.8",
+    "zenapi-helper-plugin": "^1.0.9"
+  },
+  "deprecated": false,
+  "description": "Zenapi plugin to manage settings.",
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "https://github.com/tysflotv/zenapi#readme",
+  "license": "MIT",
+  "maintainers": [],
+  "name": "zenapi-plugin-settings-manager",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tysflotv/zenapi.git"
+  },
+  "scripts": {
+    "analyze": "node ./node_modules/zenapi-helper-plugin/lib/internals/scripts/analyze.js",
+    "analyze:clean": "rimraf stats.json",
+    "build": "cross-env NODE_ENV=production node_modules/zenapi-helper-plugin/node_modules/.bin/webpack --config node_modules/zenapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "build:clean": "rimraf admin/build",
+    "build:dev": "cross-env NODE_ENV=development ./node_modules/zenapi-helper-plugin/node_modules/.bin/webpack --config node_modules/zenapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "generate": "node ./node_modules/zenapi-helper-plugin/node_modules/.bin/plop --plopfile ./node_modules/zenapi-helper-plugin/lib/internals/generators/index.js",
+    "lint": "node ./node_modules/zenapi-lint/node_modules/.bin/eslint --ignore-path .gitignore --ignore-pattern '/admin/build/' --config ./node_modules/zenapi-lint/lib/internals/eslint/.eslintrc.json admin",
+    "preanalyze": "npm run analyze:clean",
+    "prebuild": "npm run build:clean",
+    "prepublishOnly": "IS_MONOREPO=true npm run build",
+    "prettier": "node ./node_modules/zenapi-helper-plugin/node_modules/.bin/prettier --single-quote --trailing-comma es5 --write \"{admin,__{tests,mocks}__}/**/*.js\"",
+    "start": "cross-env NODE_ENV=development ./node_modules/zenapi-helper-plugin/lib/server",
+    "test": "echo \"no tests yet\""
+  },
+  "version": "1.0.9",
+  "zenapi": {
+    "name": "Settings Manager",
+    "icon": "wrench",
+    "description": "settings-manager.plugin.description"
+  }
+}

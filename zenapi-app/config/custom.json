@@ -1,0 +1,6 @@
+{
+  "socketIO": true,
+  "softDelete": {"exclude":["UploadFile", "CoreStore"]},
+  "patchHistory": {"exclude":["UploadFile", "CoreStore"]},
+  "myCustomConfiguration": "This configuration is accessible through zenapi.config.myCustomConfiguration"
+}

@@ -3,7 +3,7 @@ version: '3'
 services:
   api:
     build: .
-    image: MantisWare/zenapi
+    image: mantisware/zenapi
     environment:
       - APP_NAME=zenapi-app
       - DATABASE_CLIENT=mongo

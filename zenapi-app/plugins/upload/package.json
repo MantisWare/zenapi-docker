@@ -1,0 +1,67 @@
+{
+  "_from": "zenapi-plugin-upload",
+  "_id": "zenapi-plugin-upload@1.0.9",
+  "_inBundle": false,
+  "_integrity": "sha512-U+E0AIaJ7eSPQiOTclXzhPT9WGQm18VwEIuZE/nzbc6wzgfREMibfB+82zmNeEvKqc0znhy8H5l+GStReQFzNA==",
+  "_location": "/zenapi-plugin-upload",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "zenapi-plugin-upload",
+    "name": "zenapi-plugin-upload",
+    "escapedName": "zenapi-plugin-upload",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/zenapi-plugin-upload/-/zenapi-plugin-upload-1.0.9.tgz",
+  "_shasum": "3be351d4eb044e08101fdfe180592b79f83084ef",
+  "_spec": "zenapi-plugin-upload",
+  "_where": "/usr/src/api/zenapi-app",
+  "author": {
+    "name": "Waldo Marais",
+    "email": "waldo@mantisware.co.za",
+    "url": "http://mantisware.co.za"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "stream-to-array": "^2.3.0",
+    "uuid": "^3.2.1",
+    "zenapi-helper-plugin": "^1.0.9",
+    "zenapi-provider-upload-local": "^1.0.9",
+    "zenapi-utils": "^1.0.9"
+  },
+  "deprecated": false,
+  "description": "This is the description of the plugin.",
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "license": "MIT",
+  "maintainers": [],
+  "name": "zenapi-plugin-upload",
+  "scripts": {
+    "analyze": "node ./node_modules/zenapi-helper-plugin/lib/internals/scripts/analyze.js",
+    "analyze:clean": "rimraf stats.json",
+    "build": "cross-env NODE_ENV=production node_modules/zenapi-helper-plugin/node_modules/.bin/webpack --config node_modules/zenapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "build:clean": "rimraf admin/build",
+    "build:dev": "cross-env NODE_ENV=development ./node_modules/zenapi-helper-plugin/node_modules/.bin/webpack --config node_modules/zenapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "generate": "node ./node_modules/plop/plop.js --plopfile node_modules/zenapi-helper-plugin/lib/internals/generators/index.js",
+    "preanalyze": "npm run analyze:clean",
+    "prebuild": "npm run build:clean",
+    "prepublishOnly": "IS_MONOREPO=true npm run build",
+    "prettier": "node ./node_modules/zenapi-helper-plugin/node_modules/.bin/prettier --single-quote --trailing-comma es5 --write \"{admin,__{tests,mocks}__}/**/*.js\"",
+    "start": "cross-env NODE_ENV=development ./node_modules/zenapi-helper-plugin/lib/server",
+    "test": "echo \"no tests yet\""
+  },
+  "version": "1.0.9",
+  "zenapi": {
+    "name": "Files Upload",
+    "icon": "cloud-upload",
+    "description": "Description of upload plugin."
+  }
+}

@@ -1,0 +1,29 @@
+// App variables
+
+// - colors
+$black: #000000;
+$white: #ffffff;
+
+$zenapi-gray-light: #EFF3F6;
+$zenapi-gray: #32394A;
+
+$zenapi-blue-darker: #101622;
+$zenapi-blue-dark: #151C2E;
+$zenapi-blue: #1C5DE7;
+$zenapi-blue-light: #7E8AAA;
+
+// - layout
+// -- left menu
+$left-menu-width: 24rem;
+$left-menu-bg: $zenapi-blue-darker;
+$left-menu-link-hover: $zenapi-blue-dark;
+$left-menu-link-color: $zenapi-blue-light;
+$left-menu-title-color: $zenapi-gray;
+
+// -- header
+$header-height: 6rem;
+
+// -- content
+$content-background: $zenapi-gray-light;
+// Import bootstrap variables
+@import "variables.bootstrap";

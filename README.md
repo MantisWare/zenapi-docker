@@ -10,7 +10,7 @@ API creation made simple, secure and fast.
 ## Pull from Docker Hub - (No Longer Supported)
 
 ```bash
-docker pull MantisWare/zenapi
+docker pull mantisware/zenapi
 ```
 
 ### Then run image
@@ -35,15 +35,15 @@ docker run -e APP_NAME=zenapi-app \
            -v `pwd`/zenapi-app:/usr/src/api/zenapi-app \
            --link zenapi-mongo:mongo \
            -p 5050:5050 \
-           --name zenapi -d MantisWare/zenapi
+           --name zenapi -d mantisware/zenapi
 ```
 
 You should be able to access your Zenapi installation at [localhost:5050](http://localhost:5050).
 
-## Use as base image
+## Use as base image - (No Longer Supported)
 
 ```Dockerfile
-FROM MantisWare/zenapi
+FROM mantisware/zenapi
 ```
 
 ## Environment variables

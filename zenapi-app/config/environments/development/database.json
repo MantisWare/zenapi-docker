@@ -1,0 +1,21 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "settings": {
+        "client": "mongo",
+        "host": "db",
+        "srv": false,
+        "port": "27017",
+        "database": "zenapi",
+        "username": "",
+        "password": ""
+      },
+      "options": {
+        "authenticationDatabase": "zenapi",
+        "ssl": false
+      },
+      "connector": "zenapi-hook-mongoose"
+    }
+  }
+}

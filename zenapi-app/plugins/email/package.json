@@ -1,0 +1,75 @@
+{
+  "_from": "zenapi-plugin-email",
+  "_id": "zenapi-plugin-email@1.0.9",
+  "_inBundle": false,
+  "_integrity": "sha512-Xj3dPhiNKtuCn4tVk5i2OS3EwJlfslB/f8GlTCCM/JjQAS4xMsygSS/rb3CW81JSrQaaSbraUbmF+CVFzDdbgQ==",
+  "_location": "/zenapi-plugin-email",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "zenapi-plugin-email",
+    "name": "zenapi-plugin-email",
+    "escapedName": "zenapi-plugin-email",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/zenapi-plugin-email/-/zenapi-plugin-email-1.0.9.tgz",
+  "_shasum": "e501f03d31eaa5b790182ffbda14a45f6896aa95",
+  "_spec": "zenapi-plugin-email",
+  "_where": "/usr/src/api/zenapi-app",
+  "author": {
+    "name": "Waldo Marais",
+    "email": "waldo@mantisware.co.za",
+    "url": "http://mantisware.co.za"
+  },
+  "bugs": {
+    "url": "https://github.com/tysflotv/zenapi/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "react-copy-to-clipboard": "5.0.1",
+    "rimraf": "^2.6.3",
+    "zenapi-helper-plugin": "^1.0.9",
+    "zenapi-provider-email-sendmail": "^1.0.9",
+    "zenapi-utils": "^1.0.9"
+  },
+  "deprecated": false,
+  "description": "This is the description of the plugin.",
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "https://github.com/tysflotv/zenapi#readme",
+  "license": "MIT",
+  "maintainers": [],
+  "name": "zenapi-plugin-email",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tysflotv/zenapi.git"
+  },
+  "scripts": {
+    "analyze": "node ./node_modules/zenapi-helper-plugin/lib/internals/scripts/analyze.js",
+    "analyze:clean": "rimraf stats.json",
+    "build": "cross-env NODE_ENV=production node_modules/zenapi-helper-plugin/node_modules/.bin/webpack --config node_modules/zenapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "build:clean": "rimraf admin/build",
+    "build:dev": "cross-env NODE_ENV=development ./node_modules/zenapi-helper-plugin/node_modules/.bin/webpack --config node_modules/zenapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "generate": "node ./node_modules/plop/plop.js --plopfile node_modules/zenapi-helper-plugin/lib/internals/generators/index.js",
+    "preanalyze": "npm run analyze:clean",
+    "prebuild": "npm run build:clean",
+    "prepublishOnly": "IS_MONOREPO=true npm run build",
+    "prettier": "node ./node_modules/zenapi-helper-plugin/node_modules/.bin/prettier --single-quote --trailing-comma es5 --write \"{admin,__{tests,mocks}__}/**/*.js\"",
+    "start": "cross-env NODE_ENV=development ./node_modules/zenapi-helper-plugin/lib/server",
+    "test": "echo \"no tests yet\""
+  },
+  "version": "1.0.9",
+  "zenapi": {
+    "name": "Email",
+    "icon": "paper-plane",
+    "description": "email.plugin.description"
+  }
+}

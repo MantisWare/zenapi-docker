@@ -4,7 +4,7 @@ services:
   - docker
 
 script:
-  - docker build -t MantisWare/zenapi .
+  - docker build -t mantisware/zenapi .
   - docker-compose up -d
   - sleep 60
   - curl -f localhost:5050
